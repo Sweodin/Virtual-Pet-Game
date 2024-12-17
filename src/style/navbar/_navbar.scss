@@ -1,0 +1,70 @@
+@use '../scss/color';
+@use '../scss/font';
+@import '../scss/mixing';
+
+header{
+    @include container($min-height: 40px);
+
+    nav{
+        @include container(1400px, 70px);
+        margin: auto;
+        @include flexbox(space-between, center, row);
+
+        .logo-container{
+            @include container(400px, 70px);
+            
+            .logo{
+                @include logo;
+            }
+        }
+
+        .nav-btn{
+            @include container(600px, 70px);
+            @include flexbox(space-between, center); 
+
+            .btn{
+                @include nav-button;
+            }
+
+            .game-center{
+                background-color: color.$pet-center;
+
+                &:hover{
+                    background-color: color.$pet-center-hover;
+                    }
+    
+                    &:active{
+                        background-color: color.$pet-center-active;
+                        transform: scale(0.95);
+                    }
+            }
+
+            .logout{
+                background-color: color.$log-out;
+
+                &:hover{
+                background-color: color.$log-out-hover;
+                color:#d3d0d0;
+                }
+
+                &:active{
+                    background-color: color.$log-out-active;
+                    color:#d3d0d0;
+                    transform: scale(0.95);
+                }
+            }
+
+            .play{
+                &:hover{
+                background-color: color.$play-hover;
+                }
+
+                &:active{
+                    background-color: color.$play-active;
+                    color:#d3d0d0;
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}

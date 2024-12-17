@@ -1,0 +1,69 @@
+@use '..//scss/color';
+@use '../scss/font';
+@import '../scss/mixing';
+
+.home-wrapper{
+    @include container;
+    @include flexbox(center, center, column);
+
+    .home-container{
+        @include container(1000px, 500px);
+        @include flexbox(center, center, column);
+
+        .title-container{
+            @include container(380px, 220px);
+            margin: auto;
+            .title{
+                @include logo;
+                text-align: center;
+            }
+        }
+
+        .cta-container{
+        @include container(473px, auto);
+        @include flexbox(center, center, column);
+            
+            .lets-play{
+                font-family: font.$press-start-2p;
+                color: #21201E;
+                text-align: center;
+                font-size: 24px;
+                line-height: 35px;
+                margin-bottom: 30px;
+            }
+
+            .btn-container{
+                @include container(473px, 150px);
+                @include flexbox(space-around, center, column);
+
+                .btn-signIn,
+                .btn-signUp{
+                    @include home-button;
+                }
+                .btn-signIn{
+                    background-color: color.$form-btn;
+                }
+                .btn-signUp{
+                    background-color: #5EE270;
+
+                    &:hover {
+                        background-color: rgb(0, 89, 255);
+                        transform: scale(1.05);
+                        color:white;
+                    }
+                
+                    &:active {
+                        background-color: #2b9038;
+                        transform: scale(0.98);
+                        color:white;
+                    }
+                }
+            }
+        }
+
+        .home-cat{
+            margin-left: auto;
+            margin-right: 20px;
+        }
+    }
+}

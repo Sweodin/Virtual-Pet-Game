@@ -1,0 +1,88 @@
+@use '../scss/font';
+@use '../scss/color';
+@import '../scss/mixing';
+
+.mainContainer {
+  @include flexbox(space-between, flex-start, row, wrap);
+  @include container(1172px, 786px);
+  gap: 20px; /* Space between items */
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  background: #B6DFE3;
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+  .foodItem {
+    @include flexbox(space-between, center); 
+    @include container(540px, 342px);
+    border: 1px solid #292929;
+    padding: 50px;
+    text-align: start;
+    background-color: color.$game-center-bg;
+
+    .foodDetails {
+      flex: 1; 
+      margin-right: 16px; 
+      
+      h3 {
+        margin: 0 0 8px; 
+        color: #000;
+        font-family: font.$micro-5;
+        font-size: 51px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      p {
+        margin: 4px 0;
+        color: #555;
+      }
+
+      button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      @include flexbox(center, center);
+      width: 134px;
+      height: 41px;
+      padding: 10px;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+      gap: 10px;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      border: 1px solid #424040;
+      background: #FFC9E6;
+      font-family: font.$micro-5;
+      font-size: 26px;
+      cursor: pointer;
+
+        &:hover {
+          background-color: #55f05d;
+        }
+        
+        &:active {
+          transform: scale(0.90);
+          background-color: #55d9f0;
+        }
+
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+
+      .foodImage {
+        width: 100px;
+        height: 100px; 
+        object-fit: contain;
+      }
+    }
+  }
+}

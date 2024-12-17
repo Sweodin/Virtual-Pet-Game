@@ -1,0 +1,29 @@
+@use '../scss/color';
+@use '../scss/font';
+@import '../scss/mixing';
+
+.game-over-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    @include flexbox(center, center, column);
+    z-index: 9999;
+  
+  .game-over-content {
+    color: #FA2626;
+    font-family: font.$micro-5;
+    font-size: 180px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .restart{
+    @include restart-button;
+    margin: auto;
+  }
+}

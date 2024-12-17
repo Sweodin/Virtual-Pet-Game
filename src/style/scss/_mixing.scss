@@ -1,0 +1,189 @@
+@mixin flexbox(
+    $justify-content:center,
+    $align-items: center, 
+    $flex-direction: row, 
+    $flex-wrap: no wrap
+    )
+    {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin container(
+    $max-width: 100vw, 
+    $min-height: 100vh, 
+    $width: 100%
+) {
+    max-width: $max-width;
+    min-height: $min-height;
+    width: $width;
+}
+
+@mixin label{
+    font-family: font.$press-start-2p;
+    color: color.$form-content;
+    font-size: 10px;
+}
+
+@mixin form-content{
+    color: color.$form-content;
+    text-align: center;
+    font-family: font.$press-start-2p;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; 
+}
+
+@mixin form-button{
+    display: flex;
+    max-width: 440px;
+    min-height: 60px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: font.$micro-5;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    border: none;
+    background-color: color.$form-btn;
+
+    &:hover {
+        background-color: color.$form-btn-hover;
+        transform: scale(1.05);
+        color:white;
+    }
+
+    &:active {
+        background-color: color.$form-btn-active;
+        transform: scale(0.98);
+        color:white;
+    }
+}
+
+@mixin home-button{
+    display: flex;
+    max-width: 470px;
+    min-height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: font.$micro-5;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid black;
+    color: color.$btn-home-color;
+
+    &:hover {
+        background-color: color.$form-btn-hover;
+        transform: scale(1.05);
+        color:white;
+    }
+
+    &:active {
+        background-color: color.$form-btn-active;
+        transform: scale(0.98);
+        color:white;
+    }
+}
+
+@mixin restart-button{
+    display: flex;
+    max-width: 470px;
+    min-height: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: font.$micro-5;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid black;
+    color: color.$btn-home-color;
+
+    &:hover {
+        background-color: color.$restart-button-hover;
+        transform: scale(1.05);
+        color:white;
+    }
+
+    &:active {
+        background-color: color.$restart-button-active;
+        transform: scale(0.98);
+        color:white;
+    }
+}
+
+
+@mixin nav-button{
+    display: flex;
+    max-width: 180px;
+    min-height: 50px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    font-family: font.$micro-5;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+@mixin logo{
+    color: color.$logo;
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: #000;
+    font-family: font.$micro-5;
+    font-size: 99px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+@mixin game-button{
+    width: 190px;
+    height: 70px;
+    font-family: font.$micro-5;
+    font-size: 51px;
+    color: #424040;
+    border: 1px solid #424040;
+    background: #FFB95E;
+    box-shadow: 4px 4px 4px 0px #000;
+
+    &:hover {
+        background-color: #f9a231;
+        transform: scale(1.05);
+        color:rgb(51, 51, 51);
+    }
+
+    &:active {
+        background-color: #31f942;
+        transform: scale(0.98);
+        color:rgb(51, 51, 51);
+
+    }
+}
+
+@mixin specification{
+    color: #000;
+    font-family: font.$micro-5;
+    font-size: 51px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

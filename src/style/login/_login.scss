@@ -1,0 +1,104 @@
+@use '../scss/font';
+@use '../scss/color';
+@import '../scss/mixing';
+
+.form-wrapper {
+    @include container;
+    @include flexbox(center, center, column);
+
+    .heading{
+        @include container(385px, 20px);
+        margin:0;
+        padding: 0;
+        
+        &-text{
+            @include logo;
+        }
+    }
+
+    .bird-chest{
+        @include container (420px, 50px);
+        @include flexbox(space-between);
+        margin-bottom: 10px;
+
+        .chest{
+            width: 50px;
+        }
+    }
+
+    .login-form {
+        @include flexbox(center, center, column);
+        @include container(430px, 500px);
+        background-color: color.$form-bg;
+        box-shadow: -20px 20px 0 #c96523;
+        z-index: 10;
+
+        .input-container {
+            @include container(420px, 320px);
+            @include flexbox(space-between, center, column);
+
+            .form-content {
+                @include container(378px, 70px);
+                @include form-content;
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            label {
+                @include label;
+            }
+
+            input {
+                @include container(360px, 36px);
+                font-family: font.$poppins;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                margin-bottom:15px;
+                padding-left: 10px;
+                border: 1px solid #000;
+
+                .username{
+                    margin: 0;
+                }
+            }
+        }
+
+        .sign-in-container {
+            @include container(373px, 70px);
+
+            .sign-in {
+                @include form-button;
+            }
+        }
+    }
+    .question-terms-container{
+        @include container(300px, 54px);
+        @include flexbox(center, center, column);
+
+        .question {
+            font-family: font.$poppins;
+            font-size: 14px;
+            color: #333;
+            text-align: center;
+
+            a{
+                color: color.$txt-signup;
+                text-decoration: underline;
+                font-weight: 600;
+                &:hover{
+                    color: color.$txt-signup-hover;
+                }
+            }
+        }
+        
+        .accept-terms {
+            font-family: font.$poppins;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin: 15px;
+        }
+    }
+}
+

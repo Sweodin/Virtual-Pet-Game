@@ -1,0 +1,88 @@
+@use '../scss/color';
+@use '../scss/font';
+@import '../scss/mixing';
+
+.animal-page-container{
+    @include container(1147px, 641px);
+    margin: auto;
+    background-color: color.$game-center-bg;
+    border: 1px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+    .point-container{
+        @include container(120px, 60px);
+        @include flexbox(space-between, center);
+        margin-left: auto;
+        margin-right: 30px;
+        margin-top:20px;
+        margin-bottom: 50px;
+
+        .star-point-number{
+            font-family: font.$micro-5;
+            font-size: 51px;
+            margin-top: 10px;
+        }
+    }
+
+    .animal-status-container{
+        @include container(970px, 380px);
+        margin: auto;
+        margin-top:70px;
+        @include flexbox(space-between, flex-start, row);
+
+        .animal-img{
+            img{
+                width: 300px;
+                margin-left: 50px;
+            }
+        }
+        
+        .animal-status{
+            @include flexbox(space-between, center, column);
+            @include container(430px, 50px);
+
+            .needs{
+                @include container(450px, 60px);
+                @include flexbox(flex-end, center, row);
+                margin-left: auto;
+
+                .text-container{
+                    @include container(130px, 40px);
+                    display: flex;
+
+                    .spec{
+                        @include specification;
+                        margin-left:auto;
+                        margin-right: 20px;
+                    }
+                }
+
+                .bar {
+                    width: 100%;
+                    height: 20px;
+                    background-color: #f0f0f0;
+                    border:1px solid black;
+                    border-radius: 5px;
+                    overflow: hidden;
+                  
+                  
+                  .color {
+                    height: 100%;
+                    transition: width 0.3s ease-in-out; /* Aggiungi una transizione per l'animazione */
+                  }
+                }
+            }
+        }
+    }
+
+    .animal-page-btn{
+        @include container(970px, 70px);
+        @include flexbox(space-between, center);
+        margin:auto;  
+        
+        .btn-game{
+            @include game-button;
+            cursor: pointer;
+        }
+    }
+}
