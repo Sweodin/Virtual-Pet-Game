@@ -45,7 +45,7 @@ const JamendoTracks = () => {
     <div>
       {/* The audio player is hidden, just play in the background */}
       {trackUrl && (
-        <audio autoPlay loop>
+        <audio autoPlays>
           <source src={trackUrl} type="audio/mp3" />
         </audio>
       )}
