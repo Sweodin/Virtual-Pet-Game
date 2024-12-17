@@ -1,0 +1,191 @@
+.math-game-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .game-frame {
+    position: relative;
+    width: 1147px;
+    height: 641px;
+    margin: 0 auto;
+    background-color: #E5E4C7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: 1px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .game-cat {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 150px;
+    height: auto;
+}
+  
+  .game-title {
+    color: #000;
+    font-size: 70px;
+    font-family: 'Micro 5', sans-serif;
+    font-weight: 400;
+    word-wrap: break-word;
+    margin-bottom: 30px;
+  }
+  
+  .math-game-title {
+    font-family: 'Micro 5', sans-serif;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+  
+  .math-game-score {
+    font-family: 'Micro 5', sans-serif;
+    font-size: 24px;
+    color: #4CAF50;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .math-game-question-container {
+    background-color: #f5f5f5;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .math-game-question {
+    font-family: 'Micro 5', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .math-game-input {
+    display: block;
+    width: 100px;
+  height: 50px;
+    padding: 12px 20px;
+    font-size: 18px;
+    border: 2px solid #4CAF50;
+    font-family: "Micro 5", serif;
+    font-size: 38px;
+  border: 1px solid black;
+    margin: 20px auto;
+    text-align: center;
+    
+  }
+  
+  .math-game-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+
+  /*----- Hide number input spinners -----*/
+
+.math-game-input::-webkit-outer-spin-button,
+.math-game-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/*----- Firefox -----*/
+
+.math-game-input[type=number] {
+  -moz-appearance: textfield;
+}
+  
+  .math-game-button {
+    display: flex;
+    max-width: 180px;
+  min-height: 50px;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Micro 5", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 400;
+  cursor: pointer;
+  border: 1px solid black;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s;
+    margin: 10px auto;
+  }
+  
+  .math-game-button:hover {
+    background-color: #45a049;
+    color: #d3D0d0
+  }
+  .math-game-button:active {
+    background-color: #3d8b40;
+    color: #d3d0d0;
+    transform: scale(0.95);
+  }
+
+  .math-game-stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-family: 'Micro 5', sans-serif;
+    font-size: 24px;
+    width: 80%;
+    max-width: 800px;
+    padding: 10px 20px;
+}
+
+.math-game-stats > div {
+    padding: 0 15px;
+    min-width: 150px;
+}
+
+.math-game-lives {
+    color: #ff4444;
+}
+
+.math-game-timer {
+    color: #ffa500;
+}
+
+.math-game-questions {
+    color: #4CAF50;
+}
+
+.math-game-over {
+    text-align: center;
+    font-family: 'Micro 5', sans-serif;
+    margin: 20px 0;
+}
+
+.math-game-over h2 {
+    font-size: 38px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.math-game-over p {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #4CAF50;
+}
+  
+  .math-game-feedback {
+    font-size: 24px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .math-game-feedback.correct {
+    color: #4CAF50;
+  }
+  
+  .math-game-feedback.incorrect {
+    color: #f44336;
+  }
